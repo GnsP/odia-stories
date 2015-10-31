@@ -1,0 +1,39 @@
+@font-face { 
+	font-family:'odia';
+	font-style:  normal;
+	font-weight: normal;
+	src: url('../utkal.ttf') format('truetype') ;
+}
+
+.odia {
+	font-family: 'odia';
+	color: #333;
+	font-size: 12pt;
+}
+
+h1.odia {
+	font-size:27pt;
+}
+
+.logo-image{
+	position: relative; 
+	max-width: 400px; 
+	max-height: 200px; 
+	left: -220px; 
+	z-index: 100;
+}
+
+.right-text{
+	text-align: right;
+}
+
+.slider {
+    display: inline-block;
+}
+
+.page {
+    width: 70vw;
+    height: 60vw;  
+    background-repeat: no-repeat;
+    background-size: cover;
+}

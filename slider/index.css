@@ -1,0 +1,30 @@
+.example {
+    text-align: center;
+    margin: 100px;
+}
+
+.slider {
+    display: inline-block;
+}
+
+.page {
+    width: 300px;
+    height: 100px;  
+    border-radius: 2px;
+    box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page:nth-child(1) {
+    background-image: url('http://www.lorempixum.com/300/100/?1');
+}
+.page:nth-child(2) {
+    background-image: url('http://www.lorempixum.com/300/100/?2');
+}
+.page:nth-child(3) {
+    background-image: url('http://www.lorempixum.com/300/100/?3');
+}
+.page:nth-child(4) {
+    background-image: url('http://www.lorempixum.com/300/100/?4');
+}
