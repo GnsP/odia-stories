@@ -2,13 +2,23 @@
 	font-family:'odia';
 	font-style:  normal;
 	font-weight: normal;
+	src: url('../akshar.ttf') format('truetype') ;
+}
+
+@font-face { 
+	font-family:'utkal';
+	font-style:  normal;
+	font-weight: normal;
 	src: url('../utkal.ttf') format('truetype') ;
 }
 
 .odia {
 	font-family: 'odia';
-	color: #333;
-	font-size: 12pt;
+	color: black;
+	font-size: 13pt;
+	word-spacing: 5pt;
+	line-height: 1.8em;
+	text-align: justify;
 }
 
 h1.odia {
@@ -32,8 +42,30 @@ h1.odia {
 }
 
 .page {
-    width: 70vw;
+	max-width: 70vw;
     height: 60vw;  
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+p{
+	text-indent: 50pt;
+	margin-bottom: 30px;
+}
+
+.bordered{
+	border: 1px red solid;
+}
+
+p.opening_para{
+	text-indent: 0;
+}
+p.opening_para:first-letter{ 
+	float: left; 
+	color: red;
+	font-size: 3em; 
+	line-height: 1.2em; 
+	padding-top: 0px; 
+	padding-right: 10px; '
+	padding-left: 0px;
 }
