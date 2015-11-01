@@ -2,7 +2,7 @@
 	font-family:'odia';
 	font-style:  normal;
 	font-weight: normal;
-	src: url('../akshar.ttf') format('truetype') ;
+	src: url('../orv2.TTF') format('truetype') ;
 }
 
 @font-face { 
@@ -15,7 +15,7 @@
 .odia {
 	font-family: 'odia';
 	color: black;
-	font-size: 13pt;
+	font-size: 12pt;
 	word-spacing: 5pt;
 	line-height: 1.8em;
 	text-align: justify;
@@ -77,4 +77,8 @@ p.opening_para:first-letter{
 
 a:hover{
 	color: green;
+}
+
+hr{
+	border: 2px purple solid;
 }
