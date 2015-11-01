@@ -69,3 +69,12 @@ p.opening_para:first-letter{
 	padding-right: 10px; '
 	padding-left: 0px;
 }
+
+.mnlink{
+	padding-right:20px;
+	text-align: center;
+}
+
+a:hover{
+	color: green;
+}
