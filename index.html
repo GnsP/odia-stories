@@ -65,5 +65,17 @@
 
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+    	function detectmob() {
+    		if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+    			return true;
+    		} else {
+    			return false;
+    		}
+    	}
+    	$('document').ready(function(){
+    		if(detectmob()) alert("Use a desktop screen and a webkit based browser for best viewing experience. Only he desktop version contains illustrations.");
+    	});
+    </script>
 </body>
 </html>
