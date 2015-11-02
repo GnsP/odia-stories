@@ -14,11 +14,10 @@
 
 .odia {
 	font-family: 'odia';
-	color: black;
+	color: #2B1A0C;
 	font-size: 12pt;
-	word-spacing: 5pt;
+	word-spacing: 7pt;
 	line-height: 1.8em;
-	text-align: justify;
 }
 
 h1.odia {
@@ -50,6 +49,7 @@ h1.odia {
 
 p{
 	text-indent: 50pt;
+	text-align: justify;
 	margin-bottom: 30px;
 	z-index: 100;
 }
@@ -87,7 +87,6 @@ hr{
 p.quotation{
 	text-indent: 0pt;
 	text-align: right;
-	text-decoration: bold;
 	float:right;
 	padding: 10%;
 	border-radius: 5px;
@@ -103,4 +102,8 @@ img.side-illustration{
 	max-width: 70%;
 	margin: 20px;
 	margin-right: -300px;
+}
+
+tr th:last-child, tr td:last-child{
+	text-align: right;
 }
