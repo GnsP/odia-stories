@@ -1,0 +1,19 @@
+@font-face { 
+  font-family:'odia';
+  font-style:  normal;
+  font-weight: normal;
+  src: url('../orv2.TTF') format('truetype') ;
+}
+
+.box{
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #333;
+  height: 70vh;
+  font-family: 'odia';
+  font-size: 1.2em;
+}
+
+body{
+  padding:5%;
+}
