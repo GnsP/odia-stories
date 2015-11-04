@@ -102,3 +102,10 @@ img.side-illustration{
 tr th:last-child, tr td:last-child{
 	text-align: right;
 }
+
+h1.site-name a{
+	color : #b62;
+}
+h1.site-name a:hover{
+	color : olive;
+}
