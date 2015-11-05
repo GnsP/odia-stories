@@ -12,8 +12,26 @@
   height: 70vh;
   font-family: 'odia';
   font-size: 1.2em;
+  margin-left: 0;
+}
+
+.box:focus{
+  border: 0px solid black;
 }
 
 body{
+  font-family: 'odia';
   padding:5%;
+  padding-top: 2%;
+}
+
+a{
+  color: #26f;
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+a:hover{
+  color: green;
 }
