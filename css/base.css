@@ -109,3 +109,8 @@ h1.site-name a{
 h1.site-name a:hover{
 	color : olive;
 }
+
+a.wrd_meaning{
+	color : #c0392b;
+	text-decoration: none;
+}
