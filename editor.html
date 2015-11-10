@@ -22,6 +22,18 @@
 	</div>
 	<div>
 		<textarea name="txtArea" class="box" id="txtArea"></textarea>
+		<br>
+		<div style="width:92%; padding:5%; background:#333; color:white; font-size:1.5em">
+		<span style="float:left;">
+			Open file:
+			<input type="file" id="fileToLoad"  onChange="loadFileAsText()">
+		</span>
+		<span style="float:right; ">
+		Save file:
+			<input id="inputFileNameToSaveAs" placeholder="untitled.txt" ></input>
+			<button onClick="saveTextAsFile()">Save File</button>
+		</span>
+		</div>
 	</div>
 	<h1>ସହାୟତା</h1>
 	<h3>ଫୋନେଟିକ୍‍ ପ୍ରଣାଳି<h1>
@@ -32,5 +44,62 @@
 	<img src="img/or-inscript.jpg">
 	<br>
 	<img src="img/OR15.JPG">
+
+
+	<script type='text/javascript'>
+
+function saveTextAsFile()
+{
+	var textToWrite = document.getElementById("txtArea").value;
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+		
+		var fileNameToSaveas = document.getElementById("inputFileNameToSaveAs");
+		if (fileNameToSaveas.value !== null)
+		{
+			var fileNameToSaveAs1 = document.getElementById("inputFileNameToSaveAs").value || 'untitled' ;
+			
+		}
+	   
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs1 + '.txt';
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null)
+	{
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	}
+	else
+	{
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+
+	downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
+}
+
+function loadFileAsText()
+{
+	var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileLoadedEvent) 
+	{
+		var textFromFileLoaded = fileLoadedEvent.target.result;
+		document.getElementById("txtArea").value = textFromFileLoaded;
+	};
+	fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+</script>
 </body>
 </html>
