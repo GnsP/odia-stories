@@ -6,19 +6,14 @@
 
 	<link rel="stylesheet" type="text/css" href="css/key.css">
 	<script type="text/javascript" src="./libs/jquery.js"></script>
-	<script type="text/javascript" src="./js/lekhaodia.min.js"></script>
+	<script type="text/javascript" src="./js/odiakbd.js"></script>
 	<script type="text/javascript" src="./libs/underscore.js"></script>
 </head>
 <body class="odia">
 	<a href="index.html" style="float:right">ମୂଳ ପୃଷ୍ଠା</a>
 	<h1>ଓଡ଼ିଆ ଏଡିଟର୍‍</h1>
-	<div style="float:right; margin-bottom:20px">
-		<label for="selectKBD" style="margin:20px">ଲିଖନ ପ୍ରଣାଳି</label>
-		<select name="selectKBD" id="selectKBD">
-			<option value="phonetic">ଓଡ଼ିଆ ଫୋନେଟିକ୍‍ (ODIA PHONETIC)</option>
-			<option value="inscript">ଓଡ଼ିଆ ଇନ୍‍ସ୍କ୍ରିପ୍ଟ (ODIA INSCRIPT)</option>
-			<option value="english">ଇଂଲିଶ୍‍ (ENGLISH)</option>
-		</select>
+	<div style="float:right; margin-bottom:20px" id="lang-value">
+    ORI
 	</div>
 	<div>
 		<textarea name="txtArea" class="box" id="txtArea"></textarea>
@@ -47,6 +42,9 @@
 
 
 	<script type='text/javascript'>
+    new window.OdiaKeyboardDriver(document.getElementById("txtArea"), function () {}, function (val) {
+      document.getElementById('lang-value').innerHTML = val === 'odia' ? 'ORI' : 'ENG';
+    });
 
 function saveTextAsFile()
 {
